@@ -174,7 +174,7 @@ input { font: inherit; }
   left: 6.615776%;
   display: grid;
   grid-template-rows: repeat(6, minmax(0, 1fr));
-  gap: clamp(9px, 3.05vw, 12px);
+  gap: clamp(7px, 2.035623vw, 8px);
 }
 
 .program-card {
@@ -182,7 +182,7 @@ input { font: inherit; }
   display: flex;
   flex-direction: column;
   min-height: 0;
-  padding: clamp(14px, 4.1vw, 16px) clamp(15px, 4.58vw, 18px);
+  padding: clamp(10px, 3.053435vw, 12px) clamp(15px, 4.58vw, 18px) clamp(4px, 1.272265vw, 5px);
   overflow: hidden;
   border-radius: clamp(15px, 5.1vw, 20px);
   background: rgba(255, 255, 255, .97);
@@ -221,7 +221,7 @@ input { font: inherit; }
   position: relative;
   z-index: 2;
   flex: 0 0 auto;
-  margin: clamp(8px, 2.8vw, 11px) 0 0;
+  margin: clamp(7px, 2.035623vw, 8px) 0 0;
   color: #3d5277;
   font-size: clamp(12px, 3.56vw, 14px);
   line-height: 1.32;
@@ -240,7 +240,7 @@ input { font: inherit; }
   width: calc(100% - clamp(9px, 3.053435vw, 12px));
   min-height: 0;
   height: auto;
-  margin: clamp(13px, 4.071247vw, 16px) auto 0;
+  margin: 16px auto 0;
   border-radius: clamp(10px, 3.05vw, 12px);
   object-fit: cover;
   object-position: center;
