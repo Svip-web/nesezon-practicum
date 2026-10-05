@@ -1393,11 +1393,16 @@ body {
   max-width: 100%;
   padding-bottom: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 400;
   letter-spacing: -.035em;
   line-height: .98;
   text-align: center;
+}
+
+.hero h1 .title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero h1 em {
@@ -1458,12 +1463,12 @@ body {
   display: grid;
   margin-top: 22px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 6px;
 }
 
 .hero-speaker-squares figure {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   margin: 0;
   overflow: hidden;
   background: var(--navy);
@@ -2098,12 +2103,82 @@ body {
 .audience-copy { grid-template-columns: 1fr; }
 
 .final-cta {
-  min-height: 480px;
+  width: 100%;
+  min-height: 600px;
   margin: 56px 0 24px;
-  padding: 38px 24px;
+  padding: 42px 24px;
   grid-template-columns: 1fr;
-  align-content: space-between;
-  gap: 38px;
+  align-content: center;
+  justify-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.final-cta > div:first-child {
+  display: grid;
+  justify-items: center;
+}
+
+.final-cta h2 {
+  max-width: 340px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.final-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.final-date {
+  margin-bottom: 24px !important;
+  color: var(--white) !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+  text-align: center;
+}
+
+.final-format {
+  color: var(--white) !important;
+  text-align: center;
+}
+
+.final-speakers {
+  display: inline-flex;
+  margin-top: 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.final-speakers p {
+  max-width: 155px;
+  margin: 0;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.final-speaker-photos {
+  display: flex;
+}
+
+.final-speaker-photos img {
+  width: 95px;
+  height: 95px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 12px rgba(9, 24, 47, .18);
+}
+
+.final-speaker-photos img:first-child { object-position: 50% 18%; }
+.final-speaker-photos img:last-child {
+  margin-left: -22px;
+  object-position: 50% 31%;
 }
 
 .final-cta .button { width: 100%; }
