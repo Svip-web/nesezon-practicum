@@ -189,6 +189,21 @@ input { font: inherit; }
   isolation: isolate;
 }
 
+.program-card::after {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  border: 10px solid transparent;
+  border-image-source: url("assets/program-lace-frame.svg");
+  border-image-slice: 82;
+  border-image-width: 10px;
+  border-image-repeat: stretch;
+  opacity: .48;
+  filter: saturate(.72);
+  content: "";
+  pointer-events: none;
+}
+
 .program-card-heading {
   position: relative;
   z-index: 2;
