@@ -43,6 +43,26 @@ input { font: inherit; }
   height: auto;
 }
 
+.hero-lcp-badge {
+  position: absolute;
+  z-index: 3;
+  top: clamp(47px, 12.72vw, 50px);
+  left: 50%;
+  display: flex;
+  width: 52.42%;
+  height: clamp(27px, 7.12vw, 28px);
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  color: #5676c1;
+  background: #fff;
+  font: 400 clamp(9px, 2.54vw, 10px)/1 Arial, Helvetica, sans-serif;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
 .audience-floral-pattern {
   position: absolute;
   z-index: 1;
