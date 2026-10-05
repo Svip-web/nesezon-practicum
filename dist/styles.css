@@ -174,7 +174,7 @@ input { font: inherit; }
   left: 6.615776%;
   display: grid;
   grid-template-rows: repeat(6, minmax(0, 1fr));
-  gap: clamp(13px, 4.071247vw, 16px);
+  gap: clamp(20px, 6.10687vw, 24px);
 }
 
 .program-card {
@@ -192,20 +192,14 @@ input { font: inherit; }
 .program-card::after {
   position: absolute;
   z-index: 0;
-  inset: -6px;
-  padding: 14px;
-  border-radius: clamp(19px, 6.62vw, 26px);
-  background: url("assets/program-lace-frame.svg") center / 100% 100% no-repeat;
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  opacity: .58;
-  filter: saturate(.78);
+  inset: -7px;
+  border: clamp(11px, 3.562341vw, 14px) solid transparent;
+  border-image-source: url("assets/program-lace-frame.svg");
+  border-image-slice: 70;
+  border-image-width: clamp(11px, 3.562341vw, 14px);
+  border-image-repeat: stretch;
+  opacity: .82;
+  filter: saturate(.88);
   content: "";
   pointer-events: none;
 }
