@@ -85,6 +85,47 @@ input { font: inherit; }
   line-height: 1.25;
 }
 
+.program-section::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: clamp(171px, 53.435vw, 210px);
+  background: #e7e8ed;
+  clip-path: polygon(
+    0 43%,
+    3% 43%,
+    5% 47%,
+    7% 49%,
+    10% 60%,
+    15% 61%,
+    20% 72%,
+    25% 73%,
+    30% 78%,
+    35% 84%,
+    40% 87%,
+    45% 87%,
+    50% 90%,
+    55% 87%,
+    60% 87%,
+    65% 84%,
+    70% 78%,
+    75% 73%,
+    80% 72%,
+    85% 61%,
+    90% 60%,
+    93% 49%,
+    95% 47%,
+    97% 43%,
+    100% 43%,
+    100% 100%,
+    0 100%
+  );
+  pointer-events: none;
+}
+
 .program-lace {
   position: absolute;
   z-index: 0;
