@@ -1,0 +1,6 @@
+*.log
+*-proof.jpg
+*-proof.png
+.openai/
+.DS_Store
+Thumbs.db

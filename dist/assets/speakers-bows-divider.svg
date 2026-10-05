@@ -1,0 +1,10 @@
+<svg width="387" height="130" viewBox="0 0 387 130" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip">
+      <rect width="387" height="130"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <image x="-0.516" y="0" width="388.008" height="130" preserveAspectRatio="none" xlink:href="bows-divider-source.png"/>
+  </g>
+</svg>
