@@ -457,7 +457,12 @@ input { font: inherit; }
   border-radius: 50%;
   color: #5676c1;
   background: #fff;
-  font: 700 clamp(11px, 3.55vw, 14px)/1 Arial, sans-serif;
+}
+
+.cta-heart-icon {
+  display: block;
+  width: 42%;
+  height: 42%;
 }
 
 .hotspot-hero {
