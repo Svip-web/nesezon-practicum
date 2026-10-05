@@ -43,13 +43,13 @@ input { font: inherit; }
   top: 86.050157%;
   left: 0;
   width: 100%;
-  height: 14.866169%;
+  height: 8.234868%;
   border-radius: 40px;
   background-image: url("assets/audience-floral-pattern.png");
   background-position: center top;
   background-repeat: repeat-y;
   background-size: 100% auto;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 100%, 90% 41%, 10% 41%, 10% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 100%, 90% 74%, 10% 74%, 10% 100%, 0 100%);
   opacity: .08;
   pointer-events: none;
 }
