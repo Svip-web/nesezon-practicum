@@ -34,6 +34,12 @@ input { font: inherit; }
 .figma-design {
   display: block;
   width: 100%;
+}
+
+.figma-design picture,
+.figma-design img {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
@@ -45,7 +51,7 @@ input { font: inherit; }
   width: 100%;
   height: 8.234868%;
   border-radius: 40px;
-  background-image: url("assets/audience-floral-pattern.png");
+  background-image: url("assets/audience-floral-pattern.webp");
   background-position: center top;
   background-repeat: repeat-y;
   background-size: 100% auto;
@@ -136,10 +142,6 @@ input { font: inherit; }
   pointer-events: none;
 }
 
-.program-lace-top {
-  top: 0;
-  opacity: 0;
-}
 .program-lace-bottom { bottom: 0; }
 
 .program-heading {
@@ -194,7 +196,7 @@ input { font: inherit; }
   z-index: 0;
   inset: -7px;
   border: clamp(11px, 3.562341vw, 14px) solid transparent;
-  border-image-source: url("assets/program-lace-frame.svg");
+  border-image-source: url("assets/program-lace-frame.webp");
   border-image-slice: 70;
   border-image-width: clamp(11px, 3.562341vw, 14px);
   border-image-repeat: stretch;
