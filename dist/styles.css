@@ -94,13 +94,14 @@ input { font: inherit; }
 }
 
 .program-section {
+  --divider-offset: clamp(42px, 12.722646vw, 50px);
   position: absolute;
   z-index: 2;
   top: 28.574873%;
   left: 0;
   width: 100%;
   height: 27.851459%;
-  overflow: hidden;
+  overflow: visible;
   color: #274779;
   background: linear-gradient(
     to bottom,
@@ -111,12 +112,24 @@ input { font: inherit; }
   line-height: 1.25;
 }
 
+.program-section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: calc(-1 * var(--divider-offset));
+  left: 0;
+  height: var(--divider-offset);
+  background: #99b9db;
+  pointer-events: none;
+}
+
 .program-section::after {
   content: "";
   position: absolute;
   z-index: 3;
   right: 0;
-  bottom: 0;
+  bottom: calc(-1 * var(--divider-offset));
   left: 0;
   height: clamp(171px, 53.435vw, 210px);
   background: #e7e8ed;
@@ -162,7 +175,7 @@ input { font: inherit; }
   pointer-events: none;
 }
 
-.program-lace-bottom { bottom: 0; }
+.program-lace-bottom { bottom: calc(-1 * var(--divider-offset)); }
 
 .program-heading {
   position: absolute;
@@ -192,7 +205,7 @@ input { font: inherit; }
   z-index: 1;
   top: 11.038961%;
   right: 6.615776%;
-  bottom: 10.606061%;
+  bottom: 5.4%;
   left: 6.615776%;
   display: grid;
   grid-template-rows: repeat(6, minmax(0, 1fr));
@@ -392,6 +405,21 @@ input { font: inherit; }
   white-space: nowrap;
 }
 
+.reveal-ready .reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, clamp(16px, 5.1vw, 20px), 0);
+  transition:
+    opacity .68s ease-out,
+    transform .68s cubic-bezier(.22, .72, .24, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-ready .reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 .registration-cta {
   position: absolute;
   z-index: 3;
@@ -535,7 +563,7 @@ input { font: inherit; }
 }
 
 .register-dialog {
-  width: min(90vw, 355px);
+  width: min(94vw, 330px);
   padding: 0;
   border: 0;
   border-radius: 26px;
@@ -550,12 +578,20 @@ input { font: inherit; }
 }
 
 .dialog-inner {
-  padding: 38px 26px 28px;
+  padding: 38px 14px 18px;
   line-height: 1.45;
+}
+
+.leeloo-hash-gulr3e,
+.leeloo-hash-gulr3e iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .dialog-close {
   position: absolute;
+  z-index: 10;
   top: 10px;
   right: 14px;
   width: 36px;
@@ -636,6 +672,11 @@ input { font: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .reveal-ready .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
   .registration-cta,
   .registration-cta::after { animation: none; }
 }
