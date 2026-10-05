@@ -174,7 +174,7 @@ input { font: inherit; }
   left: 6.615776%;
   display: grid;
   grid-template-rows: repeat(6, minmax(0, 1fr));
-  gap: clamp(7px, 2.035623vw, 8px);
+  gap: clamp(13px, 4.071247vw, 16px);
 }
 
 .program-card {
@@ -183,7 +183,7 @@ input { font: inherit; }
   flex-direction: column;
   min-height: 0;
   padding: clamp(10px, 3.053435vw, 12px) clamp(15px, 4.58vw, 18px) clamp(4px, 1.272265vw, 5px);
-  overflow: hidden;
+  overflow: visible;
   border-radius: clamp(15px, 5.1vw, 20px);
   background: rgba(255, 255, 255, .97);
   isolation: isolate;
@@ -191,15 +191,21 @@ input { font: inherit; }
 
 .program-card::after {
   position: absolute;
-  z-index: 3;
-  inset: 0;
-  border: 10px solid transparent;
-  border-image-source: url("assets/program-lace-frame.svg");
-  border-image-slice: 82;
-  border-image-width: 10px;
-  border-image-repeat: stretch;
-  opacity: .48;
-  filter: saturate(.72);
+  z-index: 0;
+  inset: -6px;
+  padding: 14px;
+  border-radius: clamp(19px, 6.62vw, 26px);
+  background: url("assets/program-lace-frame.svg") center / 100% 100% no-repeat;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: .58;
+  filter: saturate(.78);
   content: "";
   pointer-events: none;
 }
