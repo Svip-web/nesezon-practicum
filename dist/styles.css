@@ -4878,3 +4878,16 @@ body .page {
   font-size: 30px;
   line-height: 1.08;
 }
+
+/* Position the new Lera portrait inside the hero composition. */
+.hero.hero-figma .hero-figma-lera {
+  left: -70px;
+  bottom: -230px;
+  height: 590px;
+}
+
+@media (min-width: 394px) and (max-width: 600px) {
+  .hero.hero-figma .hero-figma-lera {
+    left: calc(27vw - 176px);
+  }
+}
