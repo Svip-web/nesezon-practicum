@@ -4156,6 +4156,12 @@ body .page {
   }
 }
 
+/* Keep the secondary registration buttons the same height across sections. */
+.button.button-light.js-open-form {
+  height: 66px;
+  min-height: 66px;
+}
+
 /* Larger chair labels and a slightly lighter card blue. */
 .chair-benefits .chair-benefits-card {
   background: #6282ca;
@@ -4190,8 +4196,11 @@ body .page {
 .final-cta h2 {
   width: 100%;
   max-width: 100%;
-  font-size: 24px;
-  letter-spacing: -.05em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: .95;
 }
 
 .final-speakers {
