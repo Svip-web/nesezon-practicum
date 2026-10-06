@@ -4664,6 +4664,280 @@ body .page {
   }
 }
 
+/* Figma 1708:509 — rebuilt first screen. */
+.hero.hero-figma {
+  min-height: 705px;
+  padding: 0 0 34px;
+  background: #f4f6fa;
+}
+
+.hero.hero-figma .hero-figma-card {
+  width: 100%;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+}
+
+.hero.hero-figma .hero-figma-main {
+  position: relative;
+  height: 505px;
+  overflow: hidden;
+  border-radius: 0;
+  background: #061126 url("assets/hero-wave-background.png") center 43% / cover no-repeat;
+}
+
+.hero.hero-figma .hero-figma-main::before {
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(1, 9, 27, .18), rgba(3, 15, 43, .02) 48%, rgba(4, 24, 73, .14));
+}
+
+.hero.hero-figma .hero-figma-main::after {
+  display: none;
+}
+
+.hero.hero-figma .hero-figma-kicker {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  padding-top: 24px;
+  color: rgba(255, 255, 255, .74);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .13em;
+  line-height: 1;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.hero.hero-figma h1 {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  width: 100%;
+  margin: 22px 0 0;
+  padding: 0;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1;
+  text-align: center;
+}
+
+.hero.hero-figma h1 > span {
+  display: block;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.hero.hero-figma h1 .hero-title-top {
+  margin: 0 0 4px;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.hero.hero-figma h1 .hero-title-blue {
+  margin: 0;
+  padding: 6px 13px 7px;
+  border-radius: 9px;
+  color: #fff;
+  background: #315fc2;
+  box-shadow: 0 8px 18px rgba(16, 61, 164, .3);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.hero.hero-figma h1 .hero-title-light {
+  margin-top: 5px;
+  padding: 5px 15px 6px;
+  border-radius: 999px;
+  color: #21488f;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, .16);
+  font-size: 25px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.hero.hero-figma .hero-figma-date {
+  position: absolute;
+  z-index: 2;
+  top: 224px;
+  left: 50%;
+  display: flex;
+  width: 196px;
+  height: 165px;
+  border: 2px solid rgba(49, 95, 194, .45);
+  border-radius: 27px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #5575bd;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .15);
+  transform: translateX(-50%);
+}
+
+.hero.hero-figma .hero-figma-date strong {
+  margin-top: -11px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 91px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.08em;
+  line-height: .85;
+}
+
+.hero.hero-figma .hero-figma-date span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero.hero-figma .hero-figma-people {
+  position: absolute;
+  z-index: 3;
+  inset: 188px 0 0;
+  overflow: hidden;
+}
+
+.hero.hero-figma .hero-figma-person {
+  position: absolute;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: none;
+}
+
+.hero.hero-figma .hero-figma-lera {
+  left: -25px;
+  bottom: -56px;
+  height: 330px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -22px;
+  bottom: -69px;
+  height: 350px;
+}
+
+.hero.hero-figma .hero-figma-bottom {
+  position: relative;
+  z-index: 6;
+  width: calc(100% - 14px);
+  height: auto;
+  min-height: 202px;
+  margin: -42px auto 0;
+  padding: 25px 18px 18px;
+  border-radius: 26px;
+  color: #111;
+  background: #fff;
+  box-shadow: 0 13px 30px rgba(14, 40, 89, .12);
+}
+
+.hero.hero-figma .hero-lead {
+  width: 100%;
+  max-width: 328px;
+  height: auto;
+  margin: 0 auto 15px;
+  color: #111;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.hero.hero-figma .hero-lead strong {
+  color: #111;
+  font-weight: 800;
+}
+
+.hero.hero-figma .hero-actions .button {
+  width: 100%;
+  max-width: 341px;
+  height: 66px;
+  min-height: 66px;
+  margin: 0 auto;
+  padding: 8px 9px 8px 23px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: #315db4;
+  box-shadow: none;
+}
+
+.hero.hero-figma .hero-actions .button::before {
+  display: none;
+}
+
+.hero.hero-figma .hero-actions .button .button-label {
+  display: block;
+  width: auto;
+  height: auto;
+  flex: 1 1 auto;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.05;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.hero.hero-figma .hero-actions .button .button-icon {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  border-radius: 50%;
+  place-items: center;
+  color: #18345f;
+  background: #fff;
+  box-shadow: none;
+}
+
+.hero.hero-figma .hero-actions > p {
+  width: calc(100% - 24px);
+  max-width: 300px;
+  height: auto;
+  margin: 10px auto 0;
+  color: #111;
+  font-size: 9px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+@media (min-width: 394px) and (max-width: 600px) {
+  .hero.hero-figma .hero-figma-main {
+    height: 525px;
+  }
+
+  .hero.hero-figma .hero-figma-lera {
+    left: calc(50% - 282px);
+  }
+
+  .hero.hero-figma .hero-figma-tikhon {
+    right: calc(50% - 218px);
+  }
+}
+
+.hero.hero-figma .hero-actions .button::after {
+  display: none;
+}
+
+.hero.hero-figma .hero-actions .button,
+.hero.hero-figma .hero-actions .button:hover {
+  background-color: #315db4 !important;
+  background-image: none !important;
+}
+
 /* Position the new Tikhon portrait inside the existing hero composition. */
 .hero.hero-figma .hero-figma-tikhon {
   right: -75px;
@@ -4899,5 +5173,28 @@ body .page {
 
   .hero.hero-figma .hero-figma-tikhon {
     right: calc(50vw - 276.5px);
+  }
+}
+
+/* Keep the Figma 1708:509 speaker crop above legacy hero overrides. */
+.hero.hero-figma .hero-figma-lera {
+  left: -86px;
+  bottom: -56px;
+  height: 330px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -22px;
+  bottom: -69px;
+  height: 350px;
+}
+
+@media (min-width: 394px) and (max-width: 600px) {
+  .hero.hero-figma .hero-figma-lera {
+    left: calc(50% - 282px);
+  }
+
+  .hero.hero-figma .hero-figma-tikhon {
+    right: calc(50% - 218px);
   }
 }
