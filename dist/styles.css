@@ -4664,6 +4664,19 @@ body .page {
   }
 }
 
+.hero.hero-figma .hero-figma-date {
+  z-index: auto;
+}
+
+.hero.hero-figma .hero-figma-date strong,
+.hero.hero-figma .hero-figma-date span {
+  z-index: 4;
+}
+
+.hero.hero-figma .hero-figma-date span {
+  left: 40px;
+}
+
 /* Figma 1708:509 — rebuilt first screen. */
 .hero.hero-figma {
   min-height: 705px;
@@ -5349,4 +5362,66 @@ html::-webkit-scrollbar {
 .hero.hero-figma .hero-figma-date span {
   position: absolute;
   top: 109px;
+}
+
+/* Balance the speakers and keep the date fully readable. */
+.hero.hero-figma .hero-figma-lera {
+  left: -191px;
+  bottom: -523px;
+  height: 800px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -53px;
+  bottom: -139px;
+  height: 420px;
+}
+
+/* Restore the previous framed hero CTA requested by the client. */
+.hero.hero-figma .hero-actions .button,
+.hero.hero-figma .hero-actions .button:hover {
+  padding: 8px 10px 8px 22px;
+  border: 1px solid rgba(151, 180, 232, .9);
+  border-radius: 6px;
+  color: #fff;
+  background:
+    linear-gradient(#fff, #fff) 7px 7px / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) 7px 7px / 1px 12px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 1px 12px no-repeat,
+    #18345f !important;
+  box-shadow:
+    inset 0 0 0 3px #18345f,
+    inset 0 0 0 4px rgba(151, 180, 232, .38),
+    0 10px 22px rgba(24, 52, 95, .24);
+}
+
+.hero.hero-figma .hero-actions .button .button-label {
+  font-size: 17px;
+}
+
+.hero.hero-figma .hero-actions .button .button-icon {
+  width: 40px;
+  height: 40px;
+  flex-basis: 40px;
+  box-shadow: 0 0 0 3px rgba(151, 180, 232, .28);
+}
+
+@media (min-width: 394px) and (max-width: 600px) {
+  .hero.hero-figma .hero-figma-lera {
+    left: calc(50% - 388px);
+  }
+
+  .hero.hero-figma .hero-figma-tikhon {
+    right: calc(50% - 250px);
+  }
+}
+
+.hero.hero-figma .hero-figma-date {
+  z-index: auto;
+}
+
+.hero.hero-figma .hero-figma-date strong,
+.hero.hero-figma .hero-figma-date span {
+  z-index: 4;
 }
