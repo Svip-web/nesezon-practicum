@@ -4025,11 +4025,6 @@ body .page {
   z-index: 2;
 }
 
-.button-icon,
-.site-fixed-cta-icon {
-  animation: cta-arrow-nudge 1.8s ease-in-out infinite;
-}
-
 .site-fixed-cta.is-hidden,
 body.dialog-open .site-fixed-cta {
   opacity: 0;
@@ -4039,16 +4034,9 @@ body.dialog-open .site-fixed-cta {
   transition-delay: 0s, 0s, 0s, .28s;
 }
 
-@keyframes cta-arrow-nudge {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(2px, -2px); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .site-fixed-cta,
-  .site-fixed-cta::before,
-  .button-icon,
-  .site-fixed-cta-icon {
+  .site-fixed-cta::before {
     animation: none;
   }
 }
@@ -4105,6 +4093,67 @@ body.dialog-open .site-fixed-cta {
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.hero.hero-figma .hero-actions .button {
+  gap: 0;
+  animation: cta-whole-button 1.9s ease-in-out infinite;
+}
+
+.hero.hero-figma .hero-actions .button-icon,
+.hero.hero-figma .hero-actions .button-icon svg {
+  transform: none;
+  animation: none;
+}
+
+@keyframes cta-whole-button {
+  0%, 100% {
+    box-shadow: 0 9px 20px rgba(24, 52, 95, .14);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 15px 30px rgba(24, 52, 95, .24);
+    transform: scale(1.012);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero.hero-figma .hero-actions .button {
+    animation: none;
+  }
+}
+
+/* Scroll stack: every following program card slides over the previous one. */
+body .page {
+  overflow: clip;
+}
+
+.program,
+.program .section-shell,
+.program-grid {
+  overflow: visible;
+}
+
+.program .program-card {
+  position: sticky;
+  top: 20px;
+  transform: scale(calc(1 - var(--stack-progress, 0) * .028));
+  transform-origin: top center;
+  box-shadow: 0 calc(var(--stack-progress, 0) * 14px) 30px rgba(24, 52, 95, calc(var(--stack-progress, 0) * .16));
+  will-change: transform;
+}
+
+.program .program-card:nth-child(1) { z-index: 1; }
+.program .program-card:nth-child(2) { z-index: 2; }
+.program .program-card:nth-child(3) { z-index: 3; }
+.program .program-card:nth-child(4) { z-index: 4; }
+.program .program-card:nth-child(5) { z-index: 5; }
+.program .program-card:nth-child(6) { z-index: 6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .program .program-card {
+    transform: none;
+  }
 }
 
 /* Larger chair labels and a slightly lighter card blue. */

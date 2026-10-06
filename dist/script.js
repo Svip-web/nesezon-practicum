@@ -85,3 +85,36 @@ if (revealItems.length) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 }
+
+const programCards = [...document.querySelectorAll('.program-card')];
+
+if (programCards.length > 1) {
+  let programStackFrame = 0;
+
+  const syncProgramStack = () => {
+    programStackFrame = 0;
+    const stackTop = 20;
+    const motionRange = 190;
+
+    programCards.forEach((card, index) => {
+      const nextCard = programCards[index + 1];
+      let progress = 0;
+
+      if (nextCard) {
+        const nextTop = nextCard.getBoundingClientRect().top;
+        progress = Math.max(0, Math.min(1, (stackTop + motionRange - nextTop) / motionRange));
+      }
+
+      card.style.setProperty('--stack-progress', progress.toFixed(3));
+    });
+  };
+
+  const requestProgramStackSync = () => {
+    if (programStackFrame) return;
+    programStackFrame = window.requestAnimationFrame(syncProgramStack);
+  };
+
+  window.addEventListener('scroll', requestProgramStackSync, { passive: true });
+  window.addEventListener('resize', requestProgramStackSync);
+  syncProgramStack();
+}
