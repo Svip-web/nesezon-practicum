@@ -5425,3 +5425,106 @@ html::-webkit-scrollbar {
 .hero.hero-figma .hero-figma-date span {
   z-index: 4;
 }
+
+/* Local hero correction: final cascade override. */
+.hero.hero-figma {
+  min-height: 760px;
+  background: #061126;
+}
+
+.hero.hero-figma .hero-figma-card {
+  height: 760px;
+  overflow: hidden;
+  background-color: #061126;
+}
+
+.hero.hero-figma .hero-figma-main,
+.hero.hero-figma .hero-figma-people {
+  overflow: visible;
+}
+
+.hero.hero-figma .hero-figma-lera {
+  left: -105px;
+  bottom: -283px;
+  height: 560px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -53px;
+  bottom: -139px;
+  height: 420px;
+}
+
+.hero.hero-figma .hero-figma-bottom {
+  position: relative;
+  z-index: 6;
+}
+
+@media (min-width: 394px) and (max-width: 600px) {
+  .hero.hero-figma {
+    min-height: 760px;
+  }
+
+  .hero.hero-figma .hero-figma-lera {
+    left: calc(50% - 301px);
+  }
+
+  .hero.hero-figma .hero-figma-tikhon {
+    right: calc(50% - 250px);
+  }
+}
+
+.hero.hero-figma .hero-figma-card::after {
+  content: "";
+  position: absolute;
+  z-index: 7;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 18px;
+  pointer-events: none;
+  background: #061126;
+}
+
+.hero.hero-figma .hero-figma-kicker {
+  padding-top: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+.hero.hero-figma .hero-figma-date {
+  z-index: auto;
+  left: calc(50% - 98px);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  pointer-events: none;
+  transform: none;
+}
+
+.hero.hero-figma .hero-figma-date::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  border: 2px solid rgba(49, 95, 194, .45);
+  border-radius: 27px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .15);
+}
+
+.hero.hero-figma .hero-figma-date::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 6px;
+  border: 1px solid rgba(49, 95, 194, .55);
+  border-radius: 21px;
+  pointer-events: none;
+}
+
+.hero.hero-figma .hero-figma-date strong,
+.hero.hero-figma .hero-figma-date span {
+  z-index: 4;
+}
