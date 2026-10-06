@@ -252,9 +252,10 @@ img {
   margin: 0 auto 24px;
   padding: 9px 12px;
   border: 1px solid rgba(24, 52, 95, .08);
+  border-radius: 999px;
   gap: 0;
   background: var(--white);
-  box-shadow: 0 7px 18px rgba(24, 52, 95, .06);
+  box-shadow: none;
 }
 
 .hero .eyebrow > span { display: none; }
@@ -642,6 +643,16 @@ img {
   filter: saturate(.65) contrast(1.04);
 }
 
+.program-card > img.event-photo {
+  filter: none;
+}
+
+.event-photo-numbers { object-position: 50% 44%; }
+.event-photo-clients { object-position: 50% 46%; }
+.event-photo-marketing { object-position: 50% 50%; }
+.event-photo-team { object-position: 50% 48%; }
+.event-photo-sales { object-position: 50% 42%; }
+
 .program-card-body {
   display: grid;
   padding: 28px;
@@ -886,7 +897,7 @@ img {
   right: -120px;
   bottom: -260px;
   width: 520px;
-  height: 520px;
+  height: 500px;
   border: 80px solid rgba(255, 255, 255, .08);
   border-radius: 50%;
   content: "";
@@ -1254,6 +1265,231 @@ img {
   justify-content: center;
   gap: 10px;
 }
+
+/* Figma hero 1688:263 */
+.hero.hero-figma {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0 0 64px;
+}
+
+.hero-figma-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-figma-main {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-figma-main::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: url("assets/hero-salon-bg.jpg") center / cover no-repeat;
+  opacity: .16;
+}
+
+.hero-figma-main::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, .48) 30%, rgba(255, 255, 255, .06) 72%);
+}
+
+.hero-figma-meta {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  padding: 12px 12px 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.hero-figma-meta span {
+  display: inline-flex;
+  min-height: 25px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  align-items: center;
+  color: var(--blue);
+  background: rgba(255, 255, 255, .92);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-figma-meta span:first-child {
+  color: #fff;
+  background: var(--navy);
+}
+
+.hero.hero-figma h1 {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: none;
+  margin: 6px 0 0;
+  padding: 0 12px;
+  color: #101d35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -.045em !important;
+  line-height: .9;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero.hero-figma h1 > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero.hero-figma h1 .hero-script {
+  margin-bottom: 3px;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 26px;
+  letter-spacing: -.08em !important;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.hero.hero-figma h1 .hero-title-blue {
+  color: #486fc4;
+  font-size: 40px;
+  line-height: .88;
+}
+
+.hero-figma-people {
+  position: absolute;
+  z-index: 2;
+  inset: 118px 0 0;
+}
+
+.hero-figma-person {
+  position: absolute;
+  bottom: -145px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.hero-figma-lera {
+  left: -30px;
+  height: 500px;
+}
+
+.hero-figma-tikhon {
+  right: -25px;
+  bottom: -135px;
+  height: 490px;
+}
+
+.hero-figma-name {
+  position: absolute;
+  z-index: 4;
+  bottom: 13px;
+  display: inline-flex;
+  min-height: 31px;
+  padding: 6px 13px 5px;
+  border: 1px solid rgba(72, 111, 196, .2);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  color: #486fc4;
+  background: rgba(255, 255, 255, .94);
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-figma-name-lera { left: 49px; }
+.hero-figma-name-tikhon { right: 39px; }
+
+.hero-figma-bottom {
+  position: relative;
+  z-index: 5;
+  margin-top: -18px;
+  padding: 28px 12px 18px;
+  border-radius: 22px 22px 0 0;
+  color: #fff;
+  background: #5b7bc4;
+}
+
+.hero-figma .hero-lead {
+  max-width: 330px;
+  margin: 0 auto 16px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.hero-figma .hero-lead strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.hero-figma .hero-actions {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-figma .hero-actions .button {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  padding: 7px 8px 7px 19px;
+  border: 0;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--navy);
+  background: #fff;
+  box-shadow: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  animation: none;
+}
+
+.hero-figma .hero-actions .button span {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  border-radius: 50%;
+  place-items: center;
+  color: #fff;
+  background: var(--navy);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.hero-figma .hero-actions > p {
+  max-width: 295px;
+  margin: 10px auto 0;
+  padding: 0;
+  color: rgba(255, 255, 255, .9);
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: center;
+}
 }
 
 /* CTA motion */
@@ -1390,10 +1626,14 @@ body {
 
 .hero h1 {
   position: relative;
-  max-width: 100%;
+  width: calc(100% + 32px);
+  max-width: none;
+  margin-left: -16px;
+  padding-inline: 8px;
   padding-bottom: 0;
+  box-sizing: border-box;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
+  font-size: 39px;
   font-weight: 400;
   letter-spacing: -.035em;
   line-height: .98;
@@ -1417,6 +1657,191 @@ body {
 
 .hero h1::after {
   display: none;
+}
+
+.chair-benefits.section-shell {
+  width: 100%;
+  min-height: 1016px;
+  margin: 0;
+  padding: 64px 26px 0;
+}
+
+.chair-benefits-card {
+  position: relative;
+  min-height: 482px;
+  overflow: hidden;
+  border-radius: 28px;
+  color: var(--white);
+  background: #5b7bc4;
+}
+
+.chair-benefits-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 304px;
+  margin: 0 auto;
+  padding: 28px 18px 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.28;
+  text-align: center;
+}
+
+.chair-benefits-visual {
+  position: absolute;
+  inset: 116px 0 0;
+}
+
+.chair-benefits-visual img {
+  position: absolute;
+  width: 292px;
+  height: auto;
+  max-width: none;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 10px 10px rgba(24, 52, 95, .12));
+}
+
+.chair-tag {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  min-height: 35px;
+  padding: 7px 14px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(24, 52, 95, .1);
+  border-radius: 999px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, .96);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.chair-tag-marketing { top: 133px; left: 13px; transform: rotate(-7deg); }
+.chair-tag-finance { top: 124px; right: 13px; transform: rotate(8deg); }
+.chair-tag-clients { top: 184px; left: 54px; transform: rotate(4deg); }
+.chair-tag-team { top: 220px; right: 12px; transform: rotate(-5deg); }
+.chair-tag-growth { top: 249px; left: 16px; transform: rotate(-8deg); }
+
+/* Figma program cards — node 1688:212 */
+.program {
+  padding: 64px 0 96px;
+  background: #f3f5fa;
+}
+
+.program > .section-shell {
+  width: 100%;
+  max-width: none;
+  padding: 0 26px;
+}
+
+.program .section-heading {
+  display: block;
+  margin: 0 0 34px;
+}
+
+.program .section-heading h2 {
+  max-width: 100%;
+  margin: 0;
+  color: #18345f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .98;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+
+.program-card {
+  position: relative;
+  z-index: 0;
+  width: 341px;
+  min-height: 0;
+  margin: 0;
+  padding: 20px 25px 27px;
+  overflow: visible;
+  border: 0;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: none;
+  isolation: isolate;
+  transition: none;
+}
+
+.program-card::before {
+  position: absolute;
+  z-index: -1;
+  top: -12px;
+  left: -7px;
+  width: 62px;
+  height: 56px;
+  border-radius: 15px 15px 0 15px;
+  background: #5b7bc4;
+  content: "";
+}
+
+.program-card:hover {
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.program-card > img,
+.program-card > img.event-photo {
+  display: block;
+  width: 291px;
+  height: 211px;
+  margin: 0;
+  border-radius: 22px;
+  object-fit: cover;
+  filter: none;
+}
+
+.program-card-body {
+  display: block;
+  padding: 15px 0 0;
+}
+
+.program-card-body > span {
+  display: none;
+}
+
+.program-card h3 {
+  min-height: 0;
+  margin: 0;
+  color: #5b7bc4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.program-card p {
+  margin: 13px 0 0;
+  color: #111;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+.program-card p strong {
+  color: inherit;
+  font-weight: 400;
 }
 
 .hero-speaker-line {
@@ -2049,6 +2474,7 @@ body {
   margin: 0 0 13px;
   padding: 0 10px;
   border: 1px solid var(--blue);
+  border-radius: 999px;
   align-items: center;
   justify-content: center;
   color: var(--blue);
@@ -2197,4 +2623,1551 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+
+/* Figma hero 1688:263 */
+.hero.hero-figma {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0 0 64px;
+}
+
+.hero-figma-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-figma-main {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-figma-main::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: url("assets/hero-salon-bg.jpg") center / cover no-repeat;
+  opacity: .16;
+}
+
+.hero-figma-main::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, .48) 30%, rgba(255, 255, 255, .06) 72%);
+}
+
+.hero-figma-meta {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  padding: 12px 12px 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.hero-figma-meta span {
+  display: inline-flex;
+  min-height: 25px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  align-items: center;
+  color: var(--blue);
+  background: rgba(255, 255, 255, .92);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-figma-meta span:first-child {
+  color: #fff;
+  background: var(--navy);
+}
+
+.hero.hero-figma h1 {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: none;
+  margin: 6px 0 0;
+  padding: 0 12px;
+  color: #101d35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -.045em !important;
+  line-height: .9;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero.hero-figma h1 > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero.hero-figma h1 .hero-script {
+  margin-bottom: 3px;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 26px;
+  letter-spacing: -.08em !important;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.hero.hero-figma h1 .hero-title-blue {
+  color: #486fc4;
+  font-size: 40px;
+  line-height: .88;
+}
+
+.hero-figma-people {
+  position: absolute;
+  z-index: 2;
+  inset: 118px 0 0;
+}
+
+.hero-figma-person {
+  position: absolute;
+  bottom: -145px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.hero-figma-lera {
+  left: -30px;
+  height: 500px;
+}
+
+.hero-figma-tikhon {
+  right: -25px;
+  bottom: -135px;
+  height: 490px;
+}
+
+.hero-figma-name {
+  position: absolute;
+  z-index: 4;
+  bottom: 13px;
+  display: inline-flex;
+  min-height: 31px;
+  padding: 6px 13px 5px;
+  border: 1px solid rgba(72, 111, 196, .2);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  color: #486fc4;
+  background: rgba(255, 255, 255, .94);
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-figma-name-lera { left: 49px; }
+.hero-figma-name-tikhon { right: 39px; }
+
+.hero-figma-bottom {
+  position: relative;
+  z-index: 5;
+  margin-top: -18px;
+  padding: 28px 12px 18px;
+  border-radius: 22px 22px 0 0;
+  color: #fff;
+  background: #5b7bc4;
+}
+
+.hero-figma .hero-lead {
+  max-width: 330px;
+  margin: 0 auto 16px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.hero-figma .hero-lead strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.hero-figma .hero-actions {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-figma .hero-actions .button {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  padding: 7px 8px 7px 19px;
+  border: 0;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--navy);
+  background: #fff;
+  box-shadow: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  animation: none;
+}
+
+.hero-figma .hero-actions .button span {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  border-radius: 50%;
+  place-items: center;
+  color: #fff;
+  background: var(--navy);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.hero-figma .hero-actions > p {
+  max-width: 295px;
+  margin: 10px auto 0;
+  padding: 0;
+  color: rgba(255, 255, 255, .9);
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: center;
+}
+}
+
+/* CTA motion */
+.button,
+.text-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.button::after,
+.text-button::after {
+  position: absolute;
+  z-index: 1;
+  top: -40%;
+  bottom: -40%;
+  left: -38%;
+  width: 28%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .48), transparent);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-180%) skewX(-18deg);
+  animation: cta-shine 2.4s ease-in-out infinite;
+}
+
+.button-primary {
+  animation: cta-pulse-dark 1.7s ease-in-out infinite;
+}
+
+.button-light,
+.text-button {
+  animation: cta-pulse-light 1.7s ease-in-out infinite;
+}
+
+@keyframes cta-shine {
+  0%, 48% { transform: translateX(-180%) skewX(-18deg); }
+  72%, 100% { transform: translateX(620%) skewX(-18deg); }
+}
+
+@keyframes cta-pulse-dark {
+  0%, 100% { box-shadow: 0 10px 22px rgba(24, 52, 95, .2); }
+  50% { box-shadow: 0 16px 34px rgba(24, 52, 95, .38), 0 0 0 4px rgba(86, 118, 193, .08); }
+}
+
+@keyframes cta-pulse-light {
+  0%, 100% { box-shadow: 0 9px 20px rgba(5, 22, 48, .14); }
+  50% { box-shadow: 0 15px 30px rgba(5, 22, 48, .24), 0 0 0 4px rgba(255, 255, 255, .12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .text-button,
+  .button::after,
+  .text-button::after {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .button-primary { animation: none; }
+
+  .reveal-ready [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Mobile-only presentation */
+body {
+  background: #dfe3eb;
+}
+
+.page {
+  width: min(100%, 393px);
+  margin-inline: auto;
+  padding-bottom: 16px;
+  box-shadow: 0 0 38px rgba(24, 52, 95, .1);
+}
+
+.page * { letter-spacing: 0 !important; }
+
+.section-shell,
+.site-header {
+  width: calc(100% - 32px);
+}
+
+.section-space { padding-block: 64px; }
+
+.site-header {
+  min-height: 72px;
+  grid-template-columns: 1fr auto;
+}
+
+.header-nav { display: none; }
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  font-size: 11px;
+}
+
+.brand-copy strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .1em;
+}
+
+.brand-copy small { display: none; }
+
+.button {
+  min-height: 50px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .025em;
+}
+
+.button-small {
+  min-height: 38px;
+  padding-inline: 13px;
+  font-size: 11px;
+}
+
+.hero {
+  min-height: 0;
+  padding-block: 48px 56px;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.hero h1 {
+  position: relative;
+  width: calc(100% + 32px);
+  max-width: none;
+  margin-left: -16px;
+  padding-inline: 8px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 39px;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .98;
+  text-align: center;
+}
+
+.hero h1 .title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero h1 em {
+  padding: 0 8px 2px;
+  border-radius: 4px;
+  font-style: italic;
+  font-weight: 400;
+  background: rgba(155, 187, 220, .32);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.hero h1::after {
+  display: none;
+}
+
+.chair-benefits.section-shell {
+  width: 100%;
+  min-height: 1016px;
+  margin: 0;
+  padding: 64px 26px 0;
+}
+
+.chair-benefits-card {
+  position: relative;
+  min-height: 482px;
+  overflow: hidden;
+  border-radius: 28px;
+  color: var(--white);
+  background: #5b7bc4;
+}
+
+.chair-benefits-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 304px;
+  margin: 0 auto;
+  padding: 28px 18px 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.28;
+  text-align: center;
+}
+
+.chair-benefits-visual {
+  position: absolute;
+  inset: 116px 0 0;
+}
+
+.chair-benefits-visual img {
+  position: absolute;
+  width: 292px;
+  height: auto;
+  max-width: none;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 10px 10px rgba(24, 52, 95, .12));
+}
+
+.chair-tag {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  min-height: 35px;
+  padding: 7px 14px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(24, 52, 95, .1);
+  border-radius: 999px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, .96);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.chair-tag-marketing { top: 133px; left: 13px; transform: rotate(-7deg); }
+.chair-tag-finance { top: 124px; right: 13px; transform: rotate(8deg); }
+.chair-tag-clients { top: 184px; left: 54px; transform: rotate(4deg); }
+.chair-tag-team { top: 220px; right: 12px; transform: rotate(-5deg); }
+.chair-tag-growth { top: 249px; left: 16px; transform: rotate(-8deg); }
+
+
+
+
+
+
+
+
+
+
+/* Final program-card override for Figma 1688:212 */
+.program .program-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+
+.program .program-card {
+  position: relative;
+  z-index: 0;
+  width: 341px;
+  min-height: 0;
+  margin: 0;
+  padding: 20px 25px 27px;
+  overflow: visible;
+  border: 0;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: none;
+  isolation: isolate;
+  transition: none;
+}
+
+.program .program-card::before {
+  position: absolute;
+  z-index: -1;
+  top: -12px;
+  left: -7px;
+  width: 62px;
+  height: 56px;
+  border-radius: 15px 15px 0 15px;
+  background: #5b7bc4;
+  content: "";
+}
+
+.program .program-card:hover {
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.program .program-card > img,
+.program .program-card > img.event-photo {
+  display: block;
+  width: 291px;
+  height: 211px;
+  margin: 0;
+  border-radius: 22px;
+  object-fit: cover;
+  filter: none;
+}
+
+.program .program-card-body {
+  display: block;
+  width: 291px;
+  padding: 15px 0 0;
+}
+
+.program .program-card-body > span {
+  display: none;
+}
+
+.program .program-card h3 {
+  min-height: 0;
+  margin: 0;
+  color: #5b7bc4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.program .program-card p {
+  width: 291px;
+  margin: 13px 0 0;
+  color: #111;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+.program .program-card p strong {
+  color: inherit;
+  font-weight: 400;
+}
+
+/* Signal cards restyle based on the supplied reference */
+.problem-panel {
+  padding: 0 10px 10px;
+  border-radius: 0;
+  background: #101633;
+  box-shadow: none;
+}
+
+.problem-panel .panel-heading {
+  min-height: 78px;
+  padding: 0 14px;
+  border-bottom: 0;
+}
+
+.problem-panel .panel-heading p {
+  color: #fff;
+}
+
+.problem-panel .signal-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  counter-reset: signal-card;
+  gap: 6px;
+}
+
+.problem-panel .signal-list li {
+  position: relative;
+  display: block;
+  min-height: 140px;
+  padding: 15px 15px 17px;
+  border: 0;
+  border-radius: 17px;
+  color: #111633;
+  background: #fff;
+  counter-increment: signal-card;
+}
+
+.problem-panel .signal-list li::after {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  color: #111633;
+  content: "{ 0" counter(signal-card) " }";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: .03em;
+  line-height: 1;
+}
+
+.problem-panel .signal-list li > span {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 32px;
+  margin: 0 0 27px;
+  border: 0;
+  border-radius: 999px;
+  background: #11163f;
+  box-shadow: none;
+  animation: none;
+}
+
+.problem-panel .signal-list li > span::after {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  place-items: center;
+  color: #11163f;
+  background: #fff;
+  content: "✓";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.problem-panel.is-visible .signal-list li > span,
+.problem-panel.is-visible .signal-list li > span::after {
+  animation: none;
+}
+
+.problem-panel .signal-list p {
+  margin: 0;
+  padding-right: 4px;
+  color: #202644;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.problem-panel .signal-list strong {
+  color: inherit;
+  font-weight: 400;
+}
+
+.problem-panel .panel-footer {
+  margin-top: 10px;
+  border-radius: 17px;
+}
+
+/* Exact narrow signal-card proportions from the supplied reference */
+.problem .problem-panel {
+  width: 315px;
+  margin-inline: auto;
+  padding: 5px 20px 16px;
+  background: #0b0c10;
+}
+
+.problem .problem-panel .panel-heading {
+  display: none;
+}
+
+.problem .problem-panel .signal-list {
+  width: 275px;
+  gap: 5px;
+}
+
+.problem .problem-panel .signal-list li {
+  width: 275px;
+  min-height: 136px;
+  padding: 15px 14px 16px;
+  border-radius: 16px;
+}
+
+.problem .problem-panel .signal-list li::after {
+  top: 21px;
+  right: 14px;
+  font-size: 13px;
+}
+
+.problem .problem-panel .signal-list li > span {
+  width: 60px;
+  height: 32px;
+  margin-bottom: 27px;
+}
+
+.problem .problem-panel .signal-list p {
+  width: 247px;
+  padding: 0;
+  color: #202542;
+  font-size: 13.5px;
+  line-height: 1.17;
+}
+
+.problem .problem-panel .panel-footer {
+  width: 275px;
+  margin: 10px 0 0;
+  padding-inline: 15px;
+}
+
+/* Exact hero geometry from Figma node 1688:263 */
+.hero.hero-figma {
+  min-height: 1024px;
+  padding-bottom: 177px;
+  background: #fff;
+}
+
+.hero.hero-figma .hero-figma-main {
+  height: 560px;
+}
+
+.hero.hero-figma h1 {
+  margin-top: 6px;
+  padding-inline: 8px;
+  font-size: 32px;
+  line-height: .9;
+}
+
+.hero.hero-figma h1 .hero-script {
+  margin-bottom: 2px;
+  font-size: 30px;
+  line-height: 1.08;
+}
+
+.hero.hero-figma h1 .hero-title-blue {
+  font-size: 47px;
+  line-height: .86;
+}
+
+.hero.hero-figma .hero-figma-people {
+  inset: 118px 0 0;
+}
+
+.hero.hero-figma .hero-figma-lera {
+  left: -90px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -91px;
+}
+
+.hero.hero-figma .hero-figma-name-lera {
+  left: 49px;
+}
+
+.hero.hero-figma .hero-figma-name-tikhon {
+  right: 54px;
+}
+
+.hero.hero-figma .hero-figma-bottom {
+  margin-top: 0;
+  padding: 36px 12px 38px;
+  border-radius: 22px 22px 0 0;
+}
+
+.hero.hero-figma .hero-lead {
+  margin-bottom: 22px;
+}
+
+.hero.hero-figma .hero-actions .button {
+  min-height: 75px;
+}
+
+.hero.hero-figma .hero-actions > p {
+  margin-top: 14px;
+}
+
+/* Figma 1688:263 — exact person scale and crop */
+.hero.hero-figma .hero-figma-lera {
+  left: -125px;
+  bottom: -325px;
+  height: 680px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -113px;
+  bottom: -305px;
+  height: 660px;
+}
+
+/* Final Figma crop refinement */
+.hero.hero-figma .hero-figma-lera {
+  left: -125px;
+  bottom: -395px;
+  height: 750px;
+}
+
+.hero.hero-figma .hero-figma-tikhon {
+  right: -120px;
+  bottom: -335px;
+  height: 690px;
+}
+
+/* Figma 1688:263 — exact title vertical position */
+.hero.hero-figma h1 {
+  margin-top: 45px;
+  line-height: 1;
+}
+
+.hero.hero-figma h1 .hero-script {
+  line-height: 1.15;
+}
+
+.hero.hero-figma h1 .hero-title-blue {
+  line-height: .95;
+}
+
+/* Exact chair frame geometry from Figma node 1688:2 */
+.chair-benefits.section-shell {
+  display: block;
+  width: 393px;
+  min-height: 1016px;
+  margin: 0;
+  padding: 64px 26px 0;
+}
+
+.chair-benefits .chair-benefits-card {
+  width: 341px;
+  height: 482px;
+  min-height: 482px;
+  margin: 0 auto;
+  border-radius: 28px;
+}
+
+.chair-benefits .chair-benefits-copy {
+  width: 304px;
+  max-width: 304px;
+  padding: 28px 0 0 18px;
+  font-size: 16px;
+  line-height: 1.28;
+}
+
+.chair-benefits .chair-benefits-visual {
+  inset: 116px 0 0;
+}
+
+.chair-benefits .chair-benefits-visual img {
+  width: 292px;
+  max-width: none;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* Exact text column geometry from Figma node 1688:212 */
+.program .program-card {
+  width: 341px;
+  padding: 20px 25px 27px;
+  border-radius: 26px;
+}
+
+.program .program-card > img,
+.program .program-card > img.event-photo {
+  width: 291px;
+  height: 211px;
+  border-radius: 22px;
+}
+
+.program .program-card-body {
+  width: 291px;
+  padding: 15px 0 0;
+}
+
+.program .program-card h3 {
+  width: 266px;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.program .program-card p {
+  width: 274px;
+  margin-top: 13px;
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+.program .program-card::before {
+  top: -12px;
+  left: -7px;
+  width: 62px;
+  height: 56px;
+}
+
+/* Reference card structure adapted to the site's visual system */
+.problem .problem-panel {
+  width: 341px;
+  margin-inline: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.problem .problem-panel .panel-heading {
+  display: none;
+}
+
+.problem .problem-panel .signal-list {
+  display: grid;
+  width: 341px;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+
+.problem .problem-panel .signal-list li {
+  width: 341px;
+  min-height: 136px;
+  padding: 16px 18px 18px;
+  border: 1px solid rgba(72, 111, 196, .10);
+  border-radius: 21px;
+  color: #18345f;
+  background: #fff;
+  box-shadow: none;
+}
+
+.problem .problem-panel .signal-list li::after {
+  top: 21px;
+  right: 18px;
+  color: #486fc4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.problem .problem-panel .signal-list li > span {
+  width: 60px;
+  height: 32px;
+  margin-bottom: 27px;
+  border: 0;
+  border-radius: 999px;
+  background: #5b7bc4;
+  box-shadow: none;
+}
+
+.problem .problem-panel .signal-list li > span::after {
+  color: #18345f;
+  background: #fff;
+}
+
+.problem .problem-panel .signal-list p {
+  width: 285px;
+  margin: 0;
+  padding: 0;
+  color: #263a5c;
+  font-size: 15px;
+  line-height: 1.22;
+}
+
+.problem .problem-panel .signal-list strong {
+  color: #18345f;
+  font-weight: 700;
+}
+
+.problem .problem-panel .panel-footer {
+  width: 341px;
+  margin: 12px 0 0;
+  padding: 24px 18px;
+  border-radius: 21px;
+  background: #5b7bc4;
+}
+
+/* Exact Figma typography for hero script */
+@font-face {
+  font-family: "Great Vibes";
+  src: url("assets/great-vibes.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/cormorant-garamond-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/inter-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.hero.hero-figma h1 .hero-script {
+  font-family: "Great Vibes", cursive;
+  font-size: 37.77777862548828px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0 !important;
+  line-height: .9;
+}
+
+.hero.hero-figma .hero-figma-name {
+  color: #5676c1;
+  font-family: "Great Vibes", cursive;
+  font-size: 17.654781341552734px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+/* Figma 1688:263 — exact top labels on the 393px frame. */
+.hero-figma-meta {
+  position: relative;
+  z-index: 4;
+  display: block;
+  height: 37px;
+  padding: 0;
+}
+
+.hero-figma-meta span {
+  position: absolute;
+  top: 20px;
+  box-sizing: border-box;
+  height: 33px;
+  min-height: 33px;
+  padding: 0 10px;
+  border-radius: 16.5px;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 33px;
+  white-space: nowrap;
+}
+
+.hero-figma-meta span:first-child {
+  left: 27px;
+  width: 98px;
+  font-weight: 700;
+}
+
+.hero-figma-meta span:last-child {
+  right: 28px;
+  width: 232px;
+  font-weight: 500;
+}
+
+/* Chair block ends with the card; remove the empty full-screen tail. */
+.chair-benefits.section-shell {
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+/* Hero CTA: match the Figma frame and remove the artificial white tail. */
+.hero.hero-figma {
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.hero.hero-figma .hero-figma-bottom {
+  min-height: 287px;
+  padding: 36px 26px 38px;
+}
+
+.hero.hero-figma .hero-actions .button {
+  width: 341px;
+  min-height: 70px;
+  margin-inline: auto;
+  padding: 7px 8px 7px 19px;
+}
+
+.hero.hero-figma .hero-actions .button .button-label {
+  display: block;
+  width: 178px;
+  height: auto;
+  flex: 0 0 178px;
+  border-radius: 0;
+  color: var(--navy);
+  background: transparent;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.08;
+  text-align: left;
+  white-space: normal;
+}
+
+.hero.hero-figma .hero-actions .button .button-icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  border-radius: 50%;
+  place-items: center;
+  color: #fff;
+  background: var(--navy);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* Figma 1688:212 — decorative tab behind every program card. */
+.program .program-card::before {
+  top: -24px;
+  left: 0;
+  width: 116px;
+  height: 48px;
+  border-radius: 27px 27px 0 0;
+}
+
+.program .program-card {
+  border-radius: 0 26px 26px 26px;
+}
+
+/* Figma 1688:263 — exact CTA typography and spacing. */
+.hero.hero-figma .hero-figma-bottom {
+  height: 286px;
+  min-height: 286px;
+  padding: 26px 26px 42px;
+}
+
+.hero.hero-figma .hero-lead {
+  width: 338px;
+  max-width: 338px;
+  height: 75px;
+  margin: 0 auto 18px;
+  padding: 0;
+  border-left: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.hero.hero-figma .hero-lead strong {
+  font-weight: 700;
+}
+
+.hero.hero-figma .hero-actions .button {
+  width: 341px;
+  height: 76px;
+  min-height: 76px;
+  padding: 18px 24px;
+}
+
+.hero.hero-figma .hero-actions .button .button-label {
+  width: 253px;
+  height: 36px;
+  flex: 0 0 253px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero.hero-figma .hero-actions .button .button-icon {
+  width: 40px;
+  height: 40px;
+  flex-basis: 40px;
+}
+
+.hero.hero-figma .hero-actions > p {
+  width: 310px;
+  max-width: 310px;
+  height: 40px;
+  margin: 9px auto 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* One rounded-corner system for all visible site surfaces. */
+.hero-figma-card,
+.outcome,
+.speaker-card,
+.final-cta {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.hero.hero-figma .hero-figma-main {
+  border-radius: 28px 28px 0 0;
+}
+
+.hero.hero-figma .hero-figma-bottom {
+  border-radius: 22px 22px 28px 28px;
+}
+
+.problem .problem-panel,
+.problem .problem-panel .panel-footer {
+  border-radius: 24px;
+}
+
+.speaker-photo,
+.speaker-photo img,
+.hero-speaker-squares figure,
+.hero-speaker-squares img {
+  border-radius: 22px;
+}
+
+.button,
+.text-button,
+button,
+input,
+textarea,
+select {
+  border-radius: 999px;
+}
+
+/* Persistent registration CTA: visible across the whole page. */
+.site-fixed-cta {
+  position: fixed;
+  z-index: 100;
+  right: auto;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: 50%;
+  display: flex;
+  width: 341px;
+  max-width: calc(100vw - 32px);
+  height: 64px;
+  margin: 0;
+  padding: 8px 9px 8px 22px;
+  border: 0;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background: #5f7fc7;
+  box-shadow: 0 10px 28px rgba(24, 52, 95, .22);
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease, opacity .2s ease;
+}
+
+.site-fixed-cta:hover {
+  background: #5374bd;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.site-fixed-cta:active {
+  transform: translateX(-50%);
+}
+
+.site-fixed-cta-label {
+  max-width: 250px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.site-fixed-cta-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  place-items: center;
+  color: var(--navy);
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+body.dialog-open .site-fixed-cta {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page {
+  padding-bottom: 88px;
+}
+
+/* Figma 1688:263 — chair card copy uses Inter, not the Arial site fallback. */
+.chair-benefits .chair-benefits-copy {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+/* Outcome items are separate cards, matching the rounded visual system. */
+.outcome .outcome-list {
+  display: grid;
+  gap: 10px;
+}
+
+.outcome .outcome-list li,
+.outcome .outcome-list li:first-child {
+  min-height: 74px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 18px;
+  grid-template-columns: 45px minmax(0, 1fr);
+  gap: 14px;
+  color: var(--navy);
+  background: #fff;
+}
+
+.outcome .outcome-list .outcome-icon {
+  border: 0;
+  color: var(--navy);
+  background: #d8e7f6;
+}
+
+.outcome .outcome-list li > span:last-child {
+  color: var(--navy);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Final CTA: centered card on a clean white page background. */
+body .page {
+  background: #fff;
+}
+
+.final-cta.section-shell {
+  width: 361px;
+  max-width: calc(100% - 32px);
+  margin: 56px auto 24px;
+}
+
+/* Program folders: tab behind, white sheet above, content on top. */
+.program .program-card {
+  isolation: isolate;
+  border-radius: 26px;
+  background: transparent;
+}
+
+.program .program-card::before {
+  z-index: 0;
+}
+
+.program .program-card::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: 26px;
+  background: #fff;
+  content: "";
+  pointer-events: none;
+}
+
+.program .program-card > img,
+.program .program-card > .program-card-body {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fixed CTA visibility and motion. */
+.site-fixed-cta {
+  overflow: hidden;
+  isolation: isolate;
+  animation: cta-pulse-dark 1.9s ease-in-out infinite;
+  transition: background-color .2s ease, transform .28s ease, opacity .24s ease, visibility 0s linear 0s;
+}
+
+.site-fixed-cta::before {
+  position: absolute;
+  z-index: 1;
+  top: -45%;
+  bottom: -45%;
+  left: -38%;
+  width: 28%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .42), transparent);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-180%) skewX(-18deg);
+  animation: cta-shine 2.4s ease-in-out infinite;
+}
+
+.site-fixed-cta-label,
+.site-fixed-cta-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.button-icon,
+.site-fixed-cta-icon {
+  animation: cta-arrow-nudge 1.8s ease-in-out infinite;
+}
+
+.site-fixed-cta.is-hidden,
+body.dialog-open .site-fixed-cta {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, calc(100% + 24px));
+  transition-delay: 0s, 0s, 0s, .28s;
+}
+
+@keyframes cta-arrow-nudge {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(2px, -2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-fixed-cta,
+  .site-fixed-cta::before,
+  .button-icon,
+  .site-fixed-cta-icon {
+    animation: none;
+  }
+}
+
+/* Figma chair card: exact spacing, type hierarchy and handwritten labels. */
+.chair-benefits.section-shell {
+  padding-top: 24px;
+}
+
+.chair-benefits .chair-benefits-card {
+  height: 476px;
+  min-height: 476px;
+  border-radius: 22px;
+}
+
+.chair-benefits .chair-benefits-copy {
+  width: 341px;
+  max-width: 341px;
+  padding: 28px 18px 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.chair-benefits .chair-benefits-copy strong {
+  font-weight: 700;
+}
+
+.chair-benefits .chair-tag {
+  font-family: "Great Vibes", "Segoe Script", cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.chair-benefits .chair-benefits-visual img {
+  width: 292px;
+  bottom: -21px;
+}
+
+/* Figma CTA arrow: vector geometry instead of a font glyph. */
+.button-icon svg,
+.site-fixed-cta-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Larger chair labels and a slightly lighter card blue. */
+.chair-benefits .chair-benefits-card {
+  background: #6282ca;
+}
+
+.chair-benefits .chair-tag {
+  min-height: 42px;
+  padding: 9px 18px;
+  font-size: 22px;
+}
+
+/* Restore the bold semantic highlights inside program descriptions. */
+.program .program-card p strong {
+  color: #111;
+  font-weight: 700;
+}
+
+/* Final CTA: one centered column with equal top and bottom spacing. */
+.final-cta.section-shell {
+  min-height: 0;
+  padding: 56px 24px;
+  align-content: start;
+  justify-items: stretch;
+  gap: 30px;
+}
+
+.final-cta > div:first-child {
+  width: 100%;
+  min-width: 0;
+}
+
+.final-cta h2 {
+  width: 100%;
+  max-width: 100%;
+  font-size: 24px;
+  letter-spacing: -.05em;
+}
+
+.final-speakers {
+  max-width: 100%;
+}
+
+.final-speakers p {
+  max-width: 125px;
+}
+
+.final-cta .button {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Compact transitions between speakers, audience and the final CTA. */
+.speakers.section-shell.section-space {
+  padding-bottom: 24px;
+}
+
+.audience.section-space {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+
+.final-cta.section-shell {
+  margin-top: 24px;
 }
