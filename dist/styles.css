@@ -4229,3 +4229,652 @@ body .page {
 .final-cta.section-shell {
   margin-top: 24px;
 }
+
+/* Audience section: numbered cards break up the long text block. */
+.audience {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 108% 4%, rgba(98, 130, 202, .14) 0 84px, transparent 85px),
+    linear-gradient(180deg, #fff 0%, #f8faff 100%);
+}
+
+.audience-grid {
+  gap: 26px;
+}
+
+.audience-grid > div:first-child::before {
+  display: inline-flex;
+  min-height: 30px;
+  margin-bottom: 16px;
+  padding: 0 14px;
+  border-radius: 999px;
+  align-items: center;
+  color: #fff;
+  background: #6282ca;
+  content: "ДЛЯ КОГО";
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.audience h2 span {
+  display: block;
+}
+
+.audience h2 .audience-title-accent {
+  color: #6282ca;
+  font-style: italic;
+}
+
+.audience-copy {
+  display: grid;
+  counter-reset: audience-card;
+  gap: 12px;
+}
+
+.audience-copy p {
+  position: relative;
+  width: calc(100% - 12px);
+  min-height: 176px;
+  margin: 0;
+  padding: 62px 20px 22px;
+  border: 0;
+  border-radius: 22px;
+  color: #536783;
+  background: #eef3fb;
+  box-shadow: 0 10px 24px rgba(24, 52, 95, .06);
+  counter-increment: audience-card;
+}
+
+.audience-copy p:nth-child(2) {
+  margin-left: 12px;
+  background: #f4f6fa;
+}
+
+.audience-copy p::before {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  place-items: center;
+  color: #fff;
+  background: #18345f;
+  content: "0" counter(audience-card);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.audience-copy p::after {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  width: 48px;
+  height: 1px;
+  background: rgba(98, 130, 202, .55);
+  content: "";
+}
+
+.audience-copy strong {
+  color: #18345f;
+  font-weight: 700;
+}
+
+/* End the page directly after the final registration card. */
+body .page {
+  padding-bottom: 0;
+}
+
+.final-cta.section-shell {
+  margin-bottom: 16px;
+}
+
+/* Keep every final-title line centered inside the card content width. */
+.final-cta h2 {
+  width: auto;
+  max-width: 100%;
+  font-size: 23px;
+  line-height: .98;
+  text-align: center;
+}
+
+/* Framed event-date cards, adapted to the site's blue palette. */
+.event-date-card {
+  position: relative;
+  display: inline-grid;
+  min-width: 118px;
+  min-height: 58px;
+  padding: 8px 14px 9px;
+  border: 1px solid rgba(151, 180, 232, .78);
+  border-radius: 2px;
+  place-content: center;
+  justify-items: center;
+  gap: 2px;
+  color: #fff;
+  background: #18345f;
+  box-shadow:
+    inset 0 0 0 3px #18345f,
+    inset 0 0 0 4px rgba(151, 180, 232, .34);
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+}
+
+.event-date-card::before,
+.event-date-card::after {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  content: "";
+}
+
+.event-date-card::before {
+  top: 4px;
+  left: 4px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.event-date-card::after {
+  right: 4px;
+  bottom: 4px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.event-date-card small {
+  color: rgba(255, 255, 255, .76);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em !important;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.event-date-card b {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-figma-meta {
+  height: 62px;
+}
+
+.hero-figma-meta > .event-date-card--hero {
+  top: 10px;
+  left: 27px;
+  display: grid;
+  width: 118px;
+  height: 52px;
+  min-height: 52px;
+  padding: 7px 10px;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.hero-figma-meta > .event-date-card--hero b {
+  font-size: 15px;
+}
+
+.hero-figma-meta > span:last-child {
+  top: 20px;
+  right: 16px;
+  width: 200px;
+}
+
+.panel-date.event-date-card--inline {
+  display: inline-grid;
+  width: 116px;
+  min-height: 54px;
+  margin: 0 8px 8px 0;
+  padding: 7px 10px;
+  vertical-align: middle;
+}
+
+.panel-date.event-date-card--inline b {
+  font-size: 16px;
+}
+
+.final-date.event-date-card--final {
+  display: inline-grid;
+  width: 142px;
+  min-height: 66px;
+  margin: 0 auto 24px !important;
+  padding: 9px 14px 10px;
+  color: #fff !important;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.final-date.event-date-card--final b {
+  font-size: 21px;
+}
+
+/* Pull the hero CTA into the first mobile viewport. */
+.hero.hero-figma .hero-figma-bottom {
+  margin-top: -165px;
+}
+
+.hero.hero-figma .hero-figma-name {
+  bottom: 178px;
+}
+
+/* Tighten the hero top and strengthen the upper-right label. */
+.hero.hero-figma h1 {
+  margin-top: 24px;
+}
+
+.hero-figma-meta > span:last-child {
+  right: 12px;
+  width: 220px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Lower the CTA slightly while keeping its button inside a 600px viewport. */
+.hero.hero-figma .hero-figma-bottom {
+  margin-top: -156px;
+}
+
+.hero.hero-figma .hero-figma-name {
+  bottom: 169px;
+}
+
+/* Stronger whole-button pulse and a visible blue-tinted shine. */
+.hero.hero-figma .hero-actions .button {
+  animation: hero-cta-attention 1.45s ease-in-out infinite;
+}
+
+.hero.hero-figma .hero-actions .button::after {
+  width: 34%;
+  background: linear-gradient(90deg, transparent, rgba(86, 118, 193, .28), transparent);
+  animation: hero-cta-shine 1.8s ease-in-out infinite;
+}
+
+@keyframes hero-cta-attention {
+  0%, 100% {
+    background: #fff;
+    box-shadow: 0 9px 20px rgba(24, 52, 95, .18), 0 0 0 0 rgba(255, 255, 255, .36);
+    transform: scale(1);
+  }
+  50% {
+    background: #f5f8ff;
+    box-shadow: 0 18px 34px rgba(24, 52, 95, .34), 0 0 0 7px rgba(255, 255, 255, .22);
+    transform: scale(1.025);
+  }
+}
+
+@keyframes hero-cta-shine {
+  0%, 35% { transform: translateX(-180%) skewX(-18deg); }
+  70%, 100% { transform: translateX(520%) skewX(-18deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero.hero-figma .hero-actions .button,
+  .hero.hero-figma .hero-actions .button::after {
+    animation: none;
+  }
+}
+
+/* Match the hero registration button to the framed date plaque. */
+.hero.hero-figma .hero-actions .button {
+  border: 1px solid rgba(151, 180, 232, .9);
+  border-radius: 6px;
+  color: #fff;
+  background:
+    linear-gradient(#fff, #fff) 7px 7px / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) 7px 7px / 1px 12px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 1px 12px no-repeat,
+    #18345f;
+  box-shadow:
+    inset 0 0 0 3px #18345f,
+    inset 0 0 0 4px rgba(151, 180, 232, .38),
+    0 10px 22px rgba(24, 52, 95, .24);
+  animation: hero-framed-cta-attention 1.45s ease-in-out infinite;
+}
+
+.hero.hero-figma .hero-actions .button .button-label {
+  color: #fff;
+}
+
+.hero.hero-figma .hero-actions .button .button-icon {
+  color: #18345f;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(151, 180, 232, .28);
+}
+
+.hero.hero-figma .hero-actions .button::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .5), transparent);
+}
+
+@keyframes hero-framed-cta-attention {
+  0%, 100% {
+    box-shadow:
+      inset 0 0 0 3px #18345f,
+      inset 0 0 0 4px rgba(151, 180, 232, .38),
+      0 10px 22px rgba(24, 52, 95, .24),
+      0 0 0 0 rgba(255, 255, 255, .34);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      inset 0 0 0 3px #18345f,
+      inset 0 0 0 4px rgba(151, 180, 232, .55),
+      0 18px 36px rgba(24, 52, 95, .42),
+      0 0 0 7px rgba(255, 255, 255, .2);
+    transform: scale(1.025);
+  }
+}
+
+/* White hero CTA surface with dark supporting copy. */
+.hero.hero-figma .hero-figma-bottom {
+  color: #111;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(24, 52, 95, .1);
+}
+
+.hero.hero-figma .hero-lead,
+.hero.hero-figma .hero-lead strong {
+  color: #111;
+}
+
+.hero.hero-figma .hero-actions > p {
+  color: #111;
+}
+
+/* Fluid layout for wider phones while preserving the 393px reference size. */
+@media (min-width: 394px) and (max-width: 600px) {
+  body .page {
+    width: min(100%, 480px);
+  }
+
+  .hero.hero-figma .hero-figma-bottom {
+    width: 100%;
+    padding-inline: 26px;
+  }
+
+  .hero.hero-figma .hero-lead,
+  .hero.hero-figma .hero-actions .button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero.hero-figma .hero-actions > p {
+    width: calc(100% - 30px);
+    max-width: none;
+  }
+
+  .hero.hero-figma h1 {
+    font-size: clamp(32px, 8.15vw, 38px);
+  }
+
+  .hero.hero-figma h1 .hero-title-blue {
+    font-size: clamp(47px, 11.95vw, 56px);
+  }
+
+  .hero.hero-figma h1 .hero-script {
+    font-size: clamp(38px, 9.65vw, 45px);
+  }
+
+  .chair-benefits.section-shell {
+    width: 100%;
+  }
+
+  .chair-benefits .chair-benefits-card {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .chair-benefits .chair-benefits-copy {
+    width: 100%;
+    max-width: none;
+  }
+
+  .program .program-card {
+    width: 100%;
+  }
+
+  .problem .problem-panel {
+    width: calc(100% - 20px);
+  }
+
+  .problem .problem-panel .signal-list,
+  .problem .problem-panel .signal-list li,
+  .problem .problem-panel .panel-footer {
+    width: 100%;
+  }
+
+  .final-cta.section-shell {
+    width: calc(100% - 32px);
+  }
+
+  .site-fixed-cta {
+    width: calc(100% - 52px);
+    max-width: 428px;
+  }
+}
+
+/* Position the new Tikhon portrait inside the existing hero composition. */
+.hero.hero-figma .hero-figma-tikhon {
+  right: -75px;
+  bottom: -198px;
+  height: 560px;
+}
+
+@media (min-width: 394px) and (max-width: 600px) {
+  .hero.hero-figma .hero-figma-tikhon {
+    right: calc(50vw - 271.5px);
+  }
+}
+
+/* Keep the panel date and its explanation as two clear rows. */
+.problem .problem-panel .panel-footer p {
+  display: grid;
+  margin: 0;
+  justify-items: center;
+  gap: 14px;
+}
+
+.problem .problem-panel .panel-date.event-date-card--inline {
+  width: 132px;
+  min-height: 60px;
+  margin: 0;
+}
+
+.problem .problem-panel .panel-footer-copy {
+  display: block;
+  max-width: 285px;
+  color: #fff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Use the framed hero-button system for every registration CTA. */
+.text-button.js-open-form,
+.button.button-light.js-open-form {
+  display: flex;
+  height: 66px;
+  min-height: 66px;
+  padding: 8px 10px 8px 22px;
+  border: 1px solid rgba(151, 180, 232, .9);
+  border-radius: 6px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #fff;
+  background:
+    linear-gradient(#fff, #fff) 7px 7px / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) 7px 7px / 1px 12px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 1px 12px no-repeat,
+    #18345f;
+  box-shadow:
+    inset 0 0 0 3px #18345f,
+    inset 0 0 0 4px rgba(151, 180, 232, .38),
+    0 10px 22px rgba(24, 52, 95, .24);
+  animation: hero-framed-cta-attention 1.45s ease-in-out infinite;
+}
+
+.text-button.js-open-form:hover,
+.button.button-light.js-open-form:hover {
+  color: #fff;
+  background:
+    linear-gradient(#fff, #fff) 7px 7px / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) 7px 7px / 1px 12px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 1px 12px no-repeat,
+    #18345f;
+}
+
+.text-button.js-open-form .button-label,
+.button.button-light.js-open-form .button-label {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  background: transparent;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.text-button.js-open-form .button-icon,
+.button.button-light.js-open-form .button-icon {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 50%;
+  place-items: center;
+  color: #18345f;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(151, 180, 232, .28);
+}
+
+.text-button.js-open-form .button-icon svg,
+.button.button-light.js-open-form .button-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.text-button.js-open-form::after,
+.button.button-light.js-open-form::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .5), transparent);
+}
+
+.site-fixed-cta {
+  border: 1px solid rgba(151, 180, 232, .9);
+  border-radius: 6px;
+  background:
+    linear-gradient(#fff, #fff) 7px 7px / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) 7px 7px / 1px 12px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 1px 12px no-repeat,
+    #18345f;
+  box-shadow:
+    inset 0 0 0 3px #18345f,
+    inset 0 0 0 4px rgba(151, 180, 232, .38),
+    0 10px 24px rgba(24, 52, 95, .3);
+}
+
+.site-fixed-cta:hover {
+  background:
+    linear-gradient(#fff, #fff) 7px 7px / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) 7px 7px / 1px 12px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 12px 1px no-repeat,
+    linear-gradient(#fff, #fff) calc(100% - 7px) calc(100% - 7px) / 1px 12px no-repeat,
+    #18345f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-button.js-open-form,
+  .button.button-light.js-open-form {
+    animation: none;
+  }
+}
+
+/* Larger final heading without extra wrapping or edge overflow. */
+.final-cta h2 {
+  width: calc(100% - 34px);
+  max-width: none;
+  justify-self: center;
+  font-size: 26px;
+  letter-spacing: -.055em !important;
+  line-height: .96;
+}
+
+.final-cta .final-title-line {
+  position: relative;
+  left: 50%;
+  width: max-content;
+  letter-spacing: -.055em !important;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+/* Only the first-screen date keeps the framed plaque treatment. */
+.problem .problem-panel .panel-date-simple {
+  display: block;
+  width: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+
+.final-date.final-date-simple {
+  display: block;
+  width: auto;
+  min-height: 0;
+  margin: 0 auto 24px !important;
+  padding: 0;
+  border: 0;
+  color: #fff !important;
+  background: transparent;
+  box-shadow: none;
+  font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif;
+  font-size: 40px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1 !important;
+  text-align: center;
+  text-transform: none;
+}
+
+/* Add breathing room between the balanced title lines. */
+.final-cta h2 {
+  font-size: 30px;
+  line-height: 1.08;
+}
